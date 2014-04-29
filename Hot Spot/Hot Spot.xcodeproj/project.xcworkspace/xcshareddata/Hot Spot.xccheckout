@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>71C8E22B-00B1-4C5C-BF17-70984D6E8F50</string>
+	<string>6AEEAA2E-E3D8-4BBE-AA35-C5BF7F03E96F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Hot Spot</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DAD1A818-7CEA-4FBF-9BA3-F73337ACFA25</key>
-		<string>https://github.com/patrickreynolds/Hot-Spot.git</string>
+		<key>B2396BB1-0ECB-426C-9F7D-8CDF11122316</key>
+		<string>https://github.com/patrickreynolds/Hot-Spot-APP.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Hot Spot/Hot Spot.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DAD1A818-7CEA-4FBF-9BA3-F73337ACFA25</key>
+		<key>B2396BB1-0ECB-426C-9F7D-8CDF11122316</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/patrickreynolds/Hot-Spot.git</string>
+	<string>https://github.com/patrickreynolds/Hot-Spot-APP.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DAD1A818-7CEA-4FBF-9BA3-F73337ACFA25</string>
+	<string>B2396BB1-0ECB-426C-9F7D-8CDF11122316</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DAD1A818-7CEA-4FBF-9BA3-F73337ACFA25</string>
+			<string>B2396BB1-0ECB-426C-9F7D-8CDF11122316</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Hot Spot</string>
+			<string>Hot-Spot-APP</string>
 		</dict>
 	</array>
 </dict>
