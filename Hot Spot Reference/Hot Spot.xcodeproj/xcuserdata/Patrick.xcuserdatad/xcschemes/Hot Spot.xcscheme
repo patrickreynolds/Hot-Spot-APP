@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD38BF1C19106ACC00E4AABC"
+               BlueprintIdentifier = "43783ECA185D1E7A001B86D2"
                BuildableName = "Hot Spot.app"
                BlueprintName = "Hot Spot"
                ReferencedContainer = "container:Hot Spot.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD38BF3719106ACC00E4AABC"
+               BlueprintIdentifier = "43783EEB185D1E7E001B86D2"
                BuildableName = "Hot SpotTests.xctest"
                BlueprintName = "Hot SpotTests"
                ReferencedContainer = "container:Hot Spot.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD38BF1C19106ACC00E4AABC"
+            BlueprintIdentifier = "43783ECA185D1E7A001B86D2"
             BuildableName = "Hot Spot.app"
             BlueprintName = "Hot Spot"
             ReferencedContainer = "container:Hot Spot.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD38BF1C19106ACC00E4AABC"
+            BlueprintIdentifier = "43783ECA185D1E7A001B86D2"
             BuildableName = "Hot Spot.app"
             BlueprintName = "Hot Spot"
             ReferencedContainer = "container:Hot Spot.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CD38BF1C19106ACC00E4AABC"
+            BlueprintIdentifier = "43783ECA185D1E7A001B86D2"
             BuildableName = "Hot Spot.app"
             BlueprintName = "Hot Spot"
             ReferencedContainer = "container:Hot Spot.xcodeproj">

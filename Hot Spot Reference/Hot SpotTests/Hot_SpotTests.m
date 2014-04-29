@@ -2,8 +2,8 @@
 //  Hot_SpotTests.m
 //  Hot SpotTests
 //
-//  Created by Patrick Reynolds on 4/29/14.
-//  Copyright (c) 2014 Patrick Reynolds. All rights reserved.
+//  Created by Patrick Reynolds on 12/14/13.
+//  Copyright (c) 2013 Patrick Reynolds. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
