@@ -11,6 +11,10 @@
 		7E61ED6F19107EF600046C31 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED6E19107EF600046C31 /* API.m */; };
 		7E61ED721910826100046C31 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED711910826100046C31 /* Session.m */; };
 		7E61ED771910839200046C31 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED761910839200046C31 /* User.m */; };
+		7E61ED7A1910849400046C31 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED791910849400046C31 /* RootViewController.m */; };
+		7E61ED7D191084BC00046C31 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED7C191084BC00046C31 /* SplashViewController.m */; };
+		7E61ED801910860B00046C31 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED7F1910860B00046C31 /* LoginViewController.m */; };
+		7E61ED831910861A00046C31 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED821910861A00046C31 /* SignupViewController.m */; };
 		8902810607444673A8E4481D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CA4C3A3CA14771B48A67FB /* libPods.a */; };
 		CD38BF2119106ACC00E4AABC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD38BF2019106ACC00E4AABC /* Foundation.framework */; };
 		CD38BF2319106ACC00E4AABC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD38BF2219106ACC00E4AABC /* CoreGraphics.framework */; };
@@ -46,6 +50,15 @@
 		7E61ED711910826100046C31 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 		7E61ED751910839200046C31 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		7E61ED761910839200046C31 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		7E61ED781910849400046C31 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		7E61ED791910849400046C31 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		7E61ED7B191084BC00046C31 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		7E61ED7C191084BC00046C31 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		7E61ED7E1910860B00046C31 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7E61ED7F1910860B00046C31 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7E61ED811910861900046C31 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		7E61ED821910861A00046C31 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		7E61ED8819108B4000046C31 /* SignupViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewControllerDelegate.h; sourceTree = "<group>"; };
 		BF6B7120086A476DB82CCA2A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		CD38BF1D19106ACC00E4AABC /* Hot Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hot Spot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD38BF2019106ACC00E4AABC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +113,8 @@
 				7E61ED6E19107EF600046C31 /* API.m */,
 				7E61ED701910826100046C31 /* Session.h */,
 				7E61ED711910826100046C31 /* Session.m */,
+				7E61ED8719108B3500046C31 /* Protocols */,
+				7E61ED731910835D00046C31 /* ViewControllers */,
 				7E61ED741910836500046C31 /* Models */,
 			);
 			path = Classes;
@@ -113,6 +128,21 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		7E61ED731910835D00046C31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E61ED781910849400046C31 /* RootViewController.h */,
+				7E61ED791910849400046C31 /* RootViewController.m */,
+				7E61ED7B191084BC00046C31 /* SplashViewController.h */,
+				7E61ED7C191084BC00046C31 /* SplashViewController.m */,
+				7E61ED7E1910860B00046C31 /* LoginViewController.h */,
+				7E61ED7F1910860B00046C31 /* LoginViewController.m */,
+				7E61ED811910861900046C31 /* SignupViewController.h */,
+				7E61ED821910861A00046C31 /* SignupViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		7E61ED741910836500046C31 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +150,14 @@
 				7E61ED761910839200046C31 /* User.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		7E61ED8719108B3500046C31 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7E61ED8819108B4000046C31 /* SignupViewControllerDelegate.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		CD38BF1419106ACC00E4AABC = {
@@ -326,8 +364,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E61ED801910860B00046C31 /* LoginViewController.m in Sources */,
 				7E61ED771910839200046C31 /* User.m in Sources */,
+				7E61ED7D191084BC00046C31 /* SplashViewController.m in Sources */,
+				7E61ED831910861A00046C31 /* SignupViewController.m in Sources */,
 				7E61ED721910826100046C31 /* Session.m in Sources */,
+				7E61ED7A1910849400046C31 /* RootViewController.m in Sources */,
 				7E61ED6F19107EF600046C31 /* API.m in Sources */,
 				CD38BF2D19106ACC00E4AABC /* main.m in Sources */,
 				CD38BF3119106ACC00E4AABC /* AppDelegate.m in Sources */,
