@@ -1,5 +1,5 @@
 //
-//  HSAppDelegate.h
+//  AppDelegate.h
 //  Hot Spot
 //
 //  Created by Patrick Reynolds on 4/29/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HSAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
