@@ -4,12 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-JSONKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Reachability.xcscheme</key>
+		<key>Pods-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>424E4D2CBDC1476386638614</key>
+		<key>1E22EBD37D3F4AEC914BD866</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7DE2685A27F04237BE2E0AE9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8C982D3C44214F5BAD3DE9D9</key>
+		<key>DEA8CBFE5DCF491AB507889B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
