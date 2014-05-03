@@ -15,6 +15,8 @@
 		7E61ED7D191084BC00046C31 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED7C191084BC00046C31 /* SplashViewController.m */; };
 		7E61ED801910860B00046C31 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED7F1910860B00046C31 /* LoginViewController.m */; };
 		7E61ED831910861A00046C31 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED821910861A00046C31 /* SignupViewController.m */; };
+		7E61ED86191086E000046C31 /* LoggedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED85191086E000046C31 /* LoggedViewController.m */; };
+		7E61ED8B1910940800046C31 /* AssociateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED8A1910940800046C31 /* AssociateViewController.m */; };
 		8902810607444673A8E4481D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CA4C3A3CA14771B48A67FB /* libPods.a */; };
 		CD38BF2119106ACC00E4AABC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD38BF2019106ACC00E4AABC /* Foundation.framework */; };
 		CD38BF2319106ACC00E4AABC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD38BF2219106ACC00E4AABC /* CoreGraphics.framework */; };
@@ -58,7 +60,11 @@
 		7E61ED7F1910860B00046C31 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7E61ED811910861900046C31 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		7E61ED821910861A00046C31 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		7E61ED84191086E000046C31 /* LoggedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggedViewController.h; sourceTree = "<group>"; };
+		7E61ED85191086E000046C31 /* LoggedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggedViewController.m; sourceTree = "<group>"; };
 		7E61ED8819108B4000046C31 /* SignupViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupViewControllerDelegate.h; sourceTree = "<group>"; };
+		7E61ED891910940800046C31 /* AssociateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssociateViewController.h; sourceTree = "<group>"; };
+		7E61ED8A1910940800046C31 /* AssociateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssociateViewController.m; sourceTree = "<group>"; };
 		BF6B7120086A476DB82CCA2A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		CD38BF1D19106ACC00E4AABC /* Hot Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hot Spot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD38BF2019106ACC00E4AABC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -139,6 +145,10 @@
 				7E61ED7F1910860B00046C31 /* LoginViewController.m */,
 				7E61ED811910861900046C31 /* SignupViewController.h */,
 				7E61ED821910861A00046C31 /* SignupViewController.m */,
+				7E61ED891910940800046C31 /* AssociateViewController.h */,
+				7E61ED8A1910940800046C31 /* AssociateViewController.m */,
+				7E61ED84191086E000046C31 /* LoggedViewController.h */,
+				7E61ED85191086E000046C31 /* LoggedViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -364,9 +374,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E61ED86191086E000046C31 /* LoggedViewController.m in Sources */,
 				7E61ED801910860B00046C31 /* LoginViewController.m in Sources */,
 				7E61ED771910839200046C31 /* User.m in Sources */,
 				7E61ED7D191084BC00046C31 /* SplashViewController.m in Sources */,
+				7E61ED8B1910940800046C31 /* AssociateViewController.m in Sources */,
 				7E61ED831910861A00046C31 /* SignupViewController.m in Sources */,
 				7E61ED721910826100046C31 /* Session.m in Sources */,
 				7E61ED7A1910849400046C31 /* RootViewController.m in Sources */,
