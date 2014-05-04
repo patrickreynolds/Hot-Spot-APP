@@ -190,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="123" y="344"/>
         </scene>
-        <!--View Controller-->
+        <!--Associate View Controller-->
         <scene sceneID="sbF-8w-0qN">
             <objects>
-                <viewController storyboardIdentifier="Associate" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZHa-lz-aQ1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Associate" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZHa-lz-aQ1" customClass="AssociateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y0B-Z5-UGH"/>
                         <viewControllerLayoutGuide type="bottom" id="Kjf-Xf-iug"/>
@@ -201,6 +201,30 @@
                     <view key="view" contentMode="scaleToFill" id="Dg3-fd-xeO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hot Spot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAl-Fy-DU0">
+                                <rect key="frame" x="105" y="102" width="111" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Associate with Instagram" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7s-EO-y2t">
+                                <rect key="frame" x="64" y="194" width="193" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjH-K9-lfm">
+                                <rect key="frame" x="131" y="268" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapConnect:" destination="ZHa-lz-aQ1" eventType="touchUpInside" id="l0K-De-ZS2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
