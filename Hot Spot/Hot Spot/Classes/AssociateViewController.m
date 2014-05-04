@@ -9,6 +9,8 @@
 #import "AssociateViewController.h"
 
 #import "Instagram.h"
+#import "User.h"
+#import "RootViewController.h"
 
 @implementation AssociateViewController
 
@@ -21,19 +23,27 @@
                                                     clientSecret:@"f768ff10426f4cc2a6a8e6688b45a39f"
                                                        authScope:InstagramPlatformAuthScopeAll
                                                       completion:^(NSString *accessToken, NSError *error) {
-                                                          sender.enabled = YES;
                                                           if (error == nil) {
-                                                              [[[UIAlertView alloc] initWithTitle:@"Success"
-                                                                                          message:[NSString stringWithFormat:@"Instagram access_token: %@", accessToken]
-                                                                                         delegate:nil
-                                                                                cancelButtonTitle:@"OK"
-                                                                                otherButtonTitles:nil] show];
+                                                              [[User CurrentUser] associate:accessToken
+                                                                                    success:^(id responseObject) {
+                                                                                        [(RootViewController *)self.navigationController goToLogged];
+                                                                                        sender.enabled = YES;
+                                                                                    }
+                                                                                    failure:^(NSInteger statusCode, NSError *error, id responseObject) {
+                                                                                        [[[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                                    message:error.localizedDescription
+                                                                                                                   delegate:nil
+                                                                                                          cancelButtonTitle:@"OK"
+                                                                                                          otherButtonTitles:nil] show];
+                                                                                        sender.enabled = YES;
+                                                                                    }];
                                                           } else {
                                                               [[[UIAlertView alloc] initWithTitle:@"Error"
                                                                                           message:error.localizedDescription
                                                                                          delegate:nil
                                                                                 cancelButtonTitle:@"OK"
                                                                                 otherButtonTitles:nil] show];
+                                                              sender.enabled = YES;
                                                           }
                                                       }];
 }

@@ -29,5 +29,8 @@ typedef void (^UserFailureBlock)(NSInteger statusCode, NSError *error, id respon
      password:(NSString *)password
       success:(UserSuccessBlock)success
       failure:(UserFailureBlock)failure;
+- (void)associate:(NSString *)accessToken
+          success:(UserSuccessBlock)success
+          failure:(UserFailureBlock)failure;
 
 @end

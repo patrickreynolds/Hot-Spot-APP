@@ -26,12 +26,12 @@
     return loginUrl;
 }
 
-//+ (NSString *)associateUrl {
-//    static NSString *associateUrl = nil;
-//    if (associateUrl == nil) {
-//        associateUrl = [NSString stringWithFormat:@"%@%@", API_URL, @"user/associate"];
-//    }
-//    return associateUrl;
-//}
++ (NSString *)associateUrl {
+    static NSString *associateUrl = nil;
+    if (associateUrl == nil) {
+        associateUrl = [NSString stringWithFormat:@"%@%@", API_URL, @"user/associate"];
+    }
+    return associateUrl;
+}
 
 @end

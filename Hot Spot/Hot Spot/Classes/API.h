@@ -12,6 +12,6 @@
 
 + (NSString *)signupUrl;
 + (NSString *)loginUrl;
-//+ (NSString *)associateUrl;
++ (NSString *)associateUrl;
 
 @end

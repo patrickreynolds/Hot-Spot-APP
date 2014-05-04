@@ -89,4 +89,20 @@
          }];
 }
 
+- (void)associate:(NSString *)accessToken
+          success:(UserSuccessBlock)success
+          failure:(UserFailureBlock)failure {
+    NSDictionary *parameters = @{@"sessionToken":self.sessionToken, @"instagramSessionToken":accessToken};
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:[API associateUrl]
+      parameters:parameters
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             success(responseObject);
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             failure(operation.response.statusCode, error, operation.responseObject);
+         }];
+}
+
 @end
