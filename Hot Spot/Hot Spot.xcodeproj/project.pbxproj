@@ -178,6 +178,17 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		7E7898311919A75C004E1333 /* LocalizedMediaStream */ = {
+			isa = PBXGroup;
+			children = (
+				7E8248BE191895F10084AB45 /* LocalizedMediaStreamViewController.h */,
+				7E8248BF191895F10084AB45 /* LocalizedMediaStreamViewController.m */,
+				7E32EB3519196973002365FE /* LocalizedMediaStreamCell.h */,
+				7E32EB3619196973002365FE /* LocalizedMediaStreamCell.m */,
+			);
+			name = LocalizedMediaStream;
+			sourceTree = "<group>";
+		};
 		7E8248C1191895FF0084AB45 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,10 +214,7 @@
 				7E78982C19199B62004E1333 /* SearchViewController.m */,
 				7E78982819199B0E004E1333 /* HotSpotsTableViewController.h */,
 				7E78982919199B0E004E1333 /* HotSpotsTableViewController.m */,
-				7E8248BE191895F10084AB45 /* LocalizedMediaStreamViewController.h */,
-				7E8248BF191895F10084AB45 /* LocalizedMediaStreamViewController.m */,
-				7E32EB3519196973002365FE /* LocalizedMediaStreamCell.h */,
-				7E32EB3619196973002365FE /* LocalizedMediaStreamCell.m */,
+				7E7898311919A75C004E1333 /* LocalizedMediaStream */,
 			);
 			name = Logged;
 			sourceTree = "<group>";
