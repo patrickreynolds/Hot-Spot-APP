@@ -142,8 +142,7 @@
 				CD38BF3019106ACC00E4AABC /* AppDelegate.m */,
 				7EA6A1AE19157F3300DACFA7 /* API */,
 				7EA6A1AF19157F3E00DACFA7 /* Instagram */,
-				7E61ED8719108B3500046C31 /* Protocols */,
-				7E61ED731910835D00046C31 /* ViewControllers */,
+				7E61ED731910835D00046C31 /* Controllers */,
 				7E61ED741910836500046C31 /* Models */,
 			);
 			path = Classes;
@@ -157,7 +156,7 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		7E61ED731910835D00046C31 /* ViewControllers */ = {
+		7E61ED731910835D00046C31 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				7E61ED781910849400046C31 /* RootViewController.h */,
@@ -167,7 +166,7 @@
 				7E8248C1191895FF0084AB45 /* Authentication */,
 				7E8248C2191896090084AB45 /* Logged */,
 			);
-			name = ViewControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		7E61ED741910836500046C31 /* Models */ = {
@@ -179,17 +178,10 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		7E61ED8719108B3500046C31 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				7E61ED8819108B4000046C31 /* SignupViewControllerDelegate.h */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
 		7E8248C1191895FF0084AB45 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				7E61ED8819108B4000046C31 /* SignupViewControllerDelegate.h */,
 				7E61ED7E1910860B00046C31 /* LoginViewController.h */,
 				7E61ED7F1910860B00046C31 /* LoginViewController.m */,
 				7E61ED811910861900046C31 /* SignupViewController.h */,
