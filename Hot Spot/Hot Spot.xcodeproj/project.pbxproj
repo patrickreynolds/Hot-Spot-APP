@@ -20,6 +20,9 @@
 		7E61ED8B1910940800046C31 /* AssociateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED8A1910940800046C31 /* AssociateViewController.m */; };
 		7E6268521915873F002960C2 /* InstagramAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6268511915873F002960C2 /* InstagramAuthViewController.m */; };
 		7E78982719198A96004E1333 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E78982619198A96004E1333 /* MapKit.framework */; };
+		7E78982A19199B0E004E1333 /* HotSpotsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E78982919199B0E004E1333 /* HotSpotsTableViewController.m */; };
+		7E78982D19199B62004E1333 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E78982C19199B62004E1333 /* SearchViewController.m */; };
+		7E78983019199B79004E1333 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E78982F19199B79004E1333 /* FeedViewController.m */; };
 		7E8248C0191895F10084AB45 /* LocalizedMediaStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8248BF191895F10084AB45 /* LocalizedMediaStreamViewController.m */; };
 		7EA6A1B519157FFD00DACFA7 /* InstagramPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6A1B419157FFD00DACFA7 /* InstagramPlatform.m */; };
 		8902810607444673A8E4481D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CA4C3A3CA14771B48A67FB /* libPods.a */; };
@@ -75,6 +78,12 @@
 		7E6268501915873F002960C2 /* InstagramAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramAuthViewController.h; sourceTree = "<group>"; };
 		7E6268511915873F002960C2 /* InstagramAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramAuthViewController.m; sourceTree = "<group>"; };
 		7E78982619198A96004E1333 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7E78982819199B0E004E1333 /* HotSpotsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotSpotsTableViewController.h; sourceTree = "<group>"; };
+		7E78982919199B0E004E1333 /* HotSpotsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotSpotsTableViewController.m; sourceTree = "<group>"; };
+		7E78982B19199B62004E1333 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		7E78982C19199B62004E1333 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		7E78982E19199B79004E1333 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		7E78982F19199B79004E1333 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		7E8248BE191895F10084AB45 /* LocalizedMediaStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedMediaStreamViewController.h; sourceTree = "<group>"; };
 		7E8248BF191895F10084AB45 /* LocalizedMediaStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedMediaStreamViewController.m; sourceTree = "<group>"; };
 		7EA6A1B319157FFD00DACFA7 /* InstagramPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramPlatform.h; sourceTree = "<group>"; };
@@ -196,6 +205,12 @@
 			children = (
 				7E61ED84191086E000046C31 /* LoggedViewController.h */,
 				7E61ED85191086E000046C31 /* LoggedViewController.m */,
+				7E78982E19199B79004E1333 /* FeedViewController.h */,
+				7E78982F19199B79004E1333 /* FeedViewController.m */,
+				7E78982B19199B62004E1333 /* SearchViewController.h */,
+				7E78982C19199B62004E1333 /* SearchViewController.m */,
+				7E78982819199B0E004E1333 /* HotSpotsTableViewController.h */,
+				7E78982919199B0E004E1333 /* HotSpotsTableViewController.m */,
 				7E8248BE191895F10084AB45 /* LocalizedMediaStreamViewController.h */,
 				7E8248BF191895F10084AB45 /* LocalizedMediaStreamViewController.m */,
 				7E32EB3519196973002365FE /* LocalizedMediaStreamCell.h */,
@@ -435,7 +450,9 @@
 				7E61ED86191086E000046C31 /* LoggedViewController.m in Sources */,
 				7E61ED801910860B00046C31 /* LoginViewController.m in Sources */,
 				7E61ED771910839200046C31 /* User.m in Sources */,
+				7E78982A19199B0E004E1333 /* HotSpotsTableViewController.m in Sources */,
 				7E61ED7D191084BC00046C31 /* SplashViewController.m in Sources */,
+				7E78982D19199B62004E1333 /* SearchViewController.m in Sources */,
 				7E61ED8B1910940800046C31 /* AssociateViewController.m in Sources */,
 				7E61ED831910861A00046C31 /* SignupViewController.m in Sources */,
 				7E61ED721910826100046C31 /* Session.m in Sources */,
@@ -446,6 +463,7 @@
 				7EA6A1B519157FFD00DACFA7 /* InstagramPlatform.m in Sources */,
 				CD38BF3119106ACC00E4AABC /* AppDelegate.m in Sources */,
 				7E8248C0191895F10084AB45 /* LocalizedMediaStreamViewController.m in Sources */,
+				7E78983019199B79004E1333 /* FeedViewController.m in Sources */,
 				7E32EB3719196973002365FE /* LocalizedMediaStreamCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

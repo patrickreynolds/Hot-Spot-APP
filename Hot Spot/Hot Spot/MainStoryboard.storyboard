@@ -14,29 +14,28 @@
             </objects>
             <point key="canvasLocation" x="330" y="-417"/>
         </scene>
-        <!--View Controller - Feed-->
+        <!--Feed View Controller - Feed-->
         <scene sceneID="cJP-MQ-V0V">
             <objects>
-                <viewController id="EJi-Wc-BI2" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q6h-GZ-k1D"/>
-                        <viewControllerLayoutGuide type="bottom" id="nUI-Th-xks"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wSI-dx-zgb">
+                <viewController id="EJi-Wc-BI2" customClass="FeedViewController" sceneMemberID="viewController">
+                    <containerView key="view" contentMode="scaleToFill" id="rI2-fc-MYm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                        <connections>
+                            <segue destination="jKd-fM-Nhg" kind="embed" id="AxT-KO-Ozy"/>
+                        </connections>
+                    </containerView>
                     <tabBarItem key="tabBarItem" title="Feed" id="me8-mx-7at"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="daI-Bs-Vn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1390" y="-1146"/>
         </scene>
-        <!--Table View Controller - My HotSpots-->
+        <!--Hot Spots Table View Controller - My HotSpots-->
         <scene sceneID="E1L-Vx-jwU">
             <objects>
-                <tableViewController id="bL6-bo-Wb6" sceneMemberID="viewController">
+                <tableViewController id="bL6-bo-Wb6" customClass="HotSpotsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Qxt-ae-N4a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,6 +57,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="jKd-fM-Nhg" kind="push" id="beb-Jt-I7Y"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -91,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="856" y="-417"/>
         </scene>
-        <!--View Controller - Search-->
+        <!--Search View Controller - Search-->
         <scene sceneID="upF-r9-SCP">
             <objects>
-                <viewController id="1Ns-AI-LRn" sceneMemberID="viewController">
+                <viewController id="1Ns-AI-LRn" customClass="SearchViewController" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="URT-rt-Ld6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +123,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LocalizedMediaStreamCell" id="hNB-MO-gCe" customClass="LocalizedMediaStreamCell">
-                                <rect key="frame" x="14" y="0.0" width="292" height="420"/>
+                                <rect key="frame" x="14" y="64" width="292" height="420"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="292" height="420"/>
@@ -171,6 +173,7 @@
                             <outlet property="delegate" destination="jKd-fM-Nhg" id="ZI1-TJ-cF0"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="5Kg-sr-9XL"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTu-s6-Ea3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -456,4 +459,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="beb-Jt-I7Y"/>
+    </inferredMetricsTieBreakers>
 </document>
