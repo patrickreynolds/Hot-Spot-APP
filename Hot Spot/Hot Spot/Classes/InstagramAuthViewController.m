@@ -107,7 +107,6 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    // Add the web view once it loads
     if (!self.webView.superview) {
         self.topViewController.navigationItem.title = @"";
         [self.topViewController.view addSubview:self.webView];
