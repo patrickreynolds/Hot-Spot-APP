@@ -33,15 +33,14 @@ NSString * const kInstagramPlatformDefaultRedirectURI = @"instagram-platform://r
 
 #pragma mark - Initialization
 
-static InstagramPlatform *_instance = nil;
-
 + (InstagramPlatform *)sharedPlatform {
+    static InstagramPlatform *_sharedInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[InstagramPlatform alloc] init];
+        _sharedInstance = [[InstagramPlatform alloc] init];
     });
 
-    return _instance;
+    return _sharedInstance;
 }
 
 + (NSString *)basePlatformURL {
