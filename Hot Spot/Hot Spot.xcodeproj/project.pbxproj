@@ -23,6 +23,7 @@
 		7E78982A19199B0E004E1333 /* HotSpotsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E78982919199B0E004E1333 /* HotSpotsTableViewController.m */; };
 		7E78982D19199B62004E1333 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E78982C19199B62004E1333 /* SearchViewController.m */; };
 		7E78983019199B79004E1333 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E78982F19199B79004E1333 /* FeedViewController.m */; };
+		7E7898341919A8CA004E1333 /* LocalizedMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7898331919A8CA004E1333 /* LocalizedMedia.m */; };
 		7E8248C0191895F10084AB45 /* LocalizedMediaStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8248BF191895F10084AB45 /* LocalizedMediaStreamViewController.m */; };
 		7EA6A1B519157FFD00DACFA7 /* InstagramPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA6A1B419157FFD00DACFA7 /* InstagramPlatform.m */; };
 		8902810607444673A8E4481D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CA4C3A3CA14771B48A67FB /* libPods.a */; };
@@ -84,6 +85,8 @@
 		7E78982C19199B62004E1333 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		7E78982E19199B79004E1333 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		7E78982F19199B79004E1333 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		7E7898321919A8CA004E1333 /* LocalizedMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedMedia.h; sourceTree = "<group>"; };
+		7E7898331919A8CA004E1333 /* LocalizedMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedMedia.m; sourceTree = "<group>"; };
 		7E8248BE191895F10084AB45 /* LocalizedMediaStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedMediaStreamViewController.h; sourceTree = "<group>"; };
 		7E8248BF191895F10084AB45 /* LocalizedMediaStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedMediaStreamViewController.m; sourceTree = "<group>"; };
 		7EA6A1B319157FFD00DACFA7 /* InstagramPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramPlatform.h; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 			children = (
 				7E61ED751910839200046C31 /* User.h */,
 				7E61ED761910839200046C31 /* User.m */,
+				7E7898321919A8CA004E1333 /* LocalizedMedia.h */,
+				7E7898331919A8CA004E1333 /* LocalizedMedia.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 				7E78982D19199B62004E1333 /* SearchViewController.m in Sources */,
 				7E61ED8B1910940800046C31 /* AssociateViewController.m in Sources */,
 				7E61ED831910861A00046C31 /* SignupViewController.m in Sources */,
+				7E7898341919A8CA004E1333 /* LocalizedMedia.m in Sources */,
 				7E61ED721910826100046C31 /* Session.m in Sources */,
 				7E61ED7A1910849400046C31 /* RootViewController.m in Sources */,
 				7E6268521915873F002960C2 /* InstagramAuthViewController.m in Sources */,
