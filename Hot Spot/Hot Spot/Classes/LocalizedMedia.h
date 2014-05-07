@@ -8,4 +8,6 @@
 
 @interface LocalizedMedia : NSObject
 
+@property (strong, nonatomic) NSString *username;
+
 @end
