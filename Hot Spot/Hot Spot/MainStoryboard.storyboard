@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>
-                            <segue destination="jKd-fM-Nhg" kind="embed" id="AxT-KO-Ozy"/>
+                            <segue destination="jKd-fM-Nhg" kind="embed" identifier="embedLocalizedMediaStream" id="AxT-KO-Ozy"/>
                         </connections>
                     </containerView>
                     <tabBarItem key="tabBarItem" title="Feed" id="me8-mx-7at"/>
@@ -58,7 +58,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="jKd-fM-Nhg" kind="push" id="beb-Jt-I7Y"/>
+                                    <segue destination="jKd-fM-Nhg" kind="push" identifier="LocalizedMediaStream" id="beb-Jt-I7Y"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -460,6 +460,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="beb-Jt-I7Y"/>
+        <segue reference="AxT-KO-Ozy"/>
     </inferredMetricsTieBreakers>
 </document>

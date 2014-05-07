@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Patrick Reynolds. All rights reserved.
 //
 
-@interface FeedViewController : UIViewController
+#import "LocalizedMediaStreamViewController.h"
+
+@interface FeedViewController : UIViewController <LocalizedMediaStreamDelegate>
 
 @end

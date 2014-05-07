@@ -8,27 +8,58 @@
 
 #import "HotSpotsTableViewController.h"
 
+#import "LocalizedMediaStreamViewController.h"
+#import "LocalizedMedia.h"
+
 @interface HotSpotsTableViewController ()
 
 @end
 
 @implementation HotSpotsTableViewController
 
-#pragma mark - Table view data source
+#pragma mark - UIViewController
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"LocalizedMediaStream"]) {
+        LocalizedMediaStreamViewController *localizedMediaStream = segue.destinationViewController;
+        localizedMediaStream.delegate = self;
+    }
+}
+
+#pragma mark - UITableViewController
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
+
+#pragma mark - UITableViewDelegate
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 1;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HotspotCell" forIndexPath:indexPath];
     
-    //TODO: Configure the cell
+    cell.textLabel.text = [NSString stringWithFormat:@"Title #%d", indexPath.row];
     
     return cell;
 }
@@ -55,31 +86,18 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+#pragma mark - LocalizedMediaStreamDelegate
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (NSInteger)numberOfLocalizedMedia {
+    return 1;
 }
-*/
 
-/*
-#pragma mark - Navigation
+- (LocalizedMedia *)localizedMediaForRow:(NSInteger)row {
+    LocalizedMedia *localizedMedia = [LocalizedMedia new];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    localizedMedia.username = [NSString stringWithFormat:@"Username %d", row];
+
+    return localizedMedia;
 }
-*/
 
 @end

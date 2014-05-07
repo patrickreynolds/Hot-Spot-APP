@@ -8,10 +8,36 @@
 
 #import "FeedViewController.h"
 
+#import "LocalizedMediaStreamViewController.h"
+#import "LocalizedMedia.h"
+
 @interface FeedViewController ()
 
 @end
 
 @implementation FeedViewController
+
+#pragma mark - UIViewController
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"embedLocalizedMediaStream"]) {
+        LocalizedMediaStreamViewController *localizedMediaStream = segue.destinationViewController;
+        localizedMediaStream.delegate = self;
+    }
+}
+
+#pragma mark - LocalizedMediaStreamDelegate
+
+- (NSInteger)numberOfLocalizedMedia {
+    return 1;
+}
+
+- (LocalizedMedia *)localizedMediaForRow:(NSInteger)row {
+    LocalizedMedia *localizedMedia = [LocalizedMedia new];
+
+    localizedMedia.username = [NSString stringWithFormat:@"Username %d", row];
+
+    return localizedMedia;
+}
 
 @end
