@@ -8,16 +8,62 @@
 
 #import "HotSpotsTableViewController.h"
 
+#import "User.h"
+#import "HotSpot.h"
 #import "LocalizedMediaStreamViewController.h"
 #import "LocalizedMedia.h"
 
 @interface HotSpotsTableViewController ()
 
+- (void)refreshHotSpots;
+
+@property (nonatomic) NSMutableArray *hotspots;
+
 @end
 
 @implementation HotSpotsTableViewController
 
+#pragma mark - Custom methods
+
+- (void)refreshHotSpots {
+    [[User CurrentUser] getHotSpots:^(id responseObject) {
+        for (NSDictionary *hotSpot in responseObject[@"hotspots"]) {
+            HotSpot *newHotSpot = [HotSpot new];
+            newHotSpot.name = hotSpot[@"name"];
+            newHotSpot.longitude = hotSpot[@"lng"];
+            newHotSpot.latitude = hotSpot[@"lat"];
+            [self.hotspots addObject:newHotSpot];
+        }
+        [self.refreshControl endRefreshing];
+        [self.tableView reloadData];
+    }
+                            failure:^(NSInteger statusCode, NSError *error, id responseObject) {
+                                //TODO: statusCode
+                                [self.refreshControl endRefreshing];
+                                [[[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:error.localizedDescription
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil] show];
+                            }];
+}
+
 #pragma mark - UIViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                            action:@selector(refreshHotSpots)
+                  forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self refreshHotSpots];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"LocalizedMediaStream"]) {
@@ -53,13 +99,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [self.hotspots count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HotspotCell" forIndexPath:indexPath];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"Title #%d", indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HotspotCell"
+                                                            forIndexPath:indexPath];
+    HotSpot *hotSpot = self.hotspots[indexPath.row];
+
+    cell.textLabel.text = hotSpot.name;
     
     return cell;
 }
