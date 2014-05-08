@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0248BC191B4D12001465AC /* HotSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0248BB191B4D12001465AC /* HotSpot.m */; };
 		7E32EB3719196973002365FE /* LocalizedMediaStreamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E32EB3619196973002365FE /* LocalizedMediaStreamCell.m */; };
 		7E61ED6C19107DE800046C31 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E61ED6B19107DE800046C31 /* MainStoryboard.storyboard */; };
 		7E61ED6F19107EF600046C31 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E61ED6E19107EF600046C31 /* API.m */; };
@@ -53,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		51CA4C3A3CA14771B48A67FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E0248BA191B4D12001465AC /* HotSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotSpot.h; sourceTree = "<group>"; };
+		7E0248BB191B4D12001465AC /* HotSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotSpot.m; sourceTree = "<group>"; };
 		7E32EB3519196973002365FE /* LocalizedMediaStreamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedMediaStreamCell.h; sourceTree = "<group>"; };
 		7E32EB3619196973002365FE /* LocalizedMediaStreamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedMediaStreamCell.m; sourceTree = "<group>"; };
 		7E61ED6319107A5300046C31 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 			children = (
 				7E61ED751910839200046C31 /* User.h */,
 				7E61ED761910839200046C31 /* User.m */,
+				7E0248BA191B4D12001465AC /* HotSpot.h */,
+				7E0248BB191B4D12001465AC /* HotSpot.m */,
 				7E7898321919A8CA004E1333 /* LocalizedMedia.h */,
 				7E7898331919A8CA004E1333 /* LocalizedMedia.m */,
 			);
@@ -461,6 +466,7 @@
 				7E61ED8B1910940800046C31 /* AssociateViewController.m in Sources */,
 				7E61ED831910861A00046C31 /* SignupViewController.m in Sources */,
 				7E7898341919A8CA004E1333 /* LocalizedMedia.m in Sources */,
+				7E0248BC191B4D12001465AC /* HotSpot.m in Sources */,
 				7E61ED721910826100046C31 /* Session.m in Sources */,
 				7E61ED7A1910849400046C31 /* RootViewController.m in Sources */,
 				7E6268521915873F002960C2 /* InstagramAuthViewController.m in Sources */,
