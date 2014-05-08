@@ -32,5 +32,7 @@ typedef void (^UserFailureBlock)(NSInteger statusCode, NSError *error, id respon
 - (void)associate:(NSString *)accessToken
           success:(UserSuccessBlock)success
           failure:(UserFailureBlock)failure;
+- (void)getHotSpots:(UserSuccessBlock)success
+            failure:(UserFailureBlock)failure;
 
 @end

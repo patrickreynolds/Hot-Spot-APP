@@ -34,4 +34,12 @@
     return associateUrl;
 }
 
++ (NSString *)getHotSpotsUrl {
+    static NSString *getHotSpotsUrl = nil;
+    if (getHotSpotsUrl == nil) {
+        getHotSpotsUrl = [NSString stringWithFormat:@"%@%@", API_URL, @"hotspots"];
+    }
+    return getHotSpotsUrl;
+}
+
 @end
