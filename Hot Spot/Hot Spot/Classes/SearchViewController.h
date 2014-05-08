@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Patrick Reynolds. All rights reserved.
 //
 
-@interface SearchViewController : UIViewController
+#import <MapKit/MapKit.h>
+
+@interface SearchViewController : UIViewController <MKMapViewDelegate>
 
 @end
