@@ -161,7 +161,7 @@
                                             <rect key="frame" x="0.0" y="53" width="292" height="292"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="currentTime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEt-Pa-pDm">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="createdTime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEt-Pa-pDm">
                                             <rect key="frame" x="5" y="353" width="200" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -178,7 +178,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="avatar" destination="imZ-l2-hrW" id="g2g-ru-shn"/>
-                                    <outlet property="currentTime" destination="SEt-Pa-pDm" id="IT7-WF-9YT"/>
+                                    <outlet property="createdTime" destination="SEt-Pa-pDm" id="TYI-NK-3qt"/>
                                     <outlet property="likeCount" destination="ENT-j9-0fD" id="sOB-bn-cbw"/>
                                     <outlet property="picture" destination="xv4-bB-wXP" id="T11-Z6-VLN"/>
                                     <outlet property="username" destination="9AY-M5-XIi" id="MWO-xm-9g2"/>
