@@ -12,6 +12,7 @@
 + (NSString *)loginUrl;
 + (NSString *)associateUrl;
 + (NSString *)getHotSpotsUrl;
++ (NSString *)createHotSpotUrl;
 + (NSString *)fetchHotSpotUrl:(NSString *)lat lng:(NSString *)lng;
 
 @end

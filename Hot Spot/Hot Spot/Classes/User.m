@@ -120,6 +120,24 @@
           }];
 }
 
+- (void)createHotSpot:(NSString *)name
+                  lat:(NSString *)lat
+                  lng:(NSString *)lng
+              success:(UserSuccessBlock)success
+              failure:(UserFailureBlock)failure {
+    NSDictionary *parameters = @{@"sessionToken":self.sessionToken, @"name":name, @"lat":lat, @"lng":lng};
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:[API createHotSpotUrl]
+       parameters:parameters
+          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              success(responseObject);
+          }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              failure(operation.response.statusCode, error, operation.responseObject);
+          }];
+}
+
 - (void)fetchHotSpot:(NSString *)lat
                  lng:(NSString *)lng
              success:(UserSuccessBlock)success

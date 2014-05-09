@@ -42,6 +42,14 @@
     return getHotSpotsUrl;
 }
 
++ (NSString *)createHotSpotUrl {
+    static NSString *createHotSpotUrl = nil;
+    if (createHotSpotUrl == nil) {
+        createHotSpotUrl = [NSString stringWithFormat:@"%@%@", API_URL, @"hotspot"];
+    }
+    return createHotSpotUrl;
+}
+
 + (NSString *)fetchHotSpotUrl:(NSString *)lat lng:(NSString *)lng {
     static NSString *fetchHotSpotUrl = nil;
     if (fetchHotSpotUrl == nil) {
