@@ -28,6 +28,14 @@
     [self addGestureRecogniserToMapView];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    self.hotSpotMapAnnotation = [[HotSpotMapAnnotation alloc] initWithTitle:@"Preview"
+                                                                andLocation:CLLocationCoordinate2DMake(32.851402, -117.273812)];
+    [self.mapView addAnnotation:self.hotSpotMapAnnotation];
+}
+
 - (void)addGestureRecogniserToMapView {
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self
                                                                                             action:@selector(addPinToMap:)];
