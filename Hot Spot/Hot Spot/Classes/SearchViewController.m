@@ -16,6 +16,7 @@
 @interface SearchViewController ()
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic) HotSpotMapAnnotation *hotSpotMapAnnotation;
 
 @end
 
@@ -35,13 +36,16 @@
 }
 
 - (void)addPinToMap:(UIGestureRecognizer *)gestureRecognizer {
+    if (self.hotSpotMapAnnotation) {
+        [self.mapView removeAnnotation:self.hotSpotMapAnnotation];
+    }
     CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
     CLLocationCoordinate2D touchMapCoordinate = [self.mapView convertPoint:touchPoint
                                                       toCoordinateFromView:self.mapView];
 
-    HotSpotMapAnnotation *hotSpotMapAnnotation = [[HotSpotMapAnnotation alloc] initWithTitle:@"Annotation"
-                                                                                 andLocation:touchMapCoordinate];
-    [self.mapView addAnnotation:hotSpotMapAnnotation];
+    self.hotSpotMapAnnotation = [[HotSpotMapAnnotation alloc] initWithTitle:@"Annotation"
+                                                                andLocation:touchMapCoordinate];
+    [self.mapView addAnnotation:self.hotSpotMapAnnotation];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
