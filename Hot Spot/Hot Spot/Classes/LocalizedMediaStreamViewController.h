@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Patrick Reynolds. All rights reserved.
 //
 
-@class LocalizedMedia;
-@class HotSpot;
+@class LocalizedMedia, HotSpot;
 
 @protocol LocalizedMediaStreamDelegate <NSObject>
 

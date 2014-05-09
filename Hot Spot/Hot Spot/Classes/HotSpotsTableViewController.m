@@ -17,7 +17,7 @@
 
 - (void)refreshHotSpots;
 
-@property (nonatomic) NSMutableArray *hotspots;
+@property (nonatomic) NSMutableArray *hotspots; //Array HotSpot models
 
 @end
 
@@ -66,8 +66,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"LocalizedMediaStream"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         LocalizedMediaStreamViewController *localizedMediaStream = segue.destinationViewController;
         localizedMediaStream.delegate = localizedMediaStream;
+        localizedMediaStream.hotspot = self.hotspots[indexPath.row];
     }
 }
 

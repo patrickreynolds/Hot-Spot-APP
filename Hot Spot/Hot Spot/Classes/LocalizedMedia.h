@@ -8,6 +8,10 @@
 
 @interface LocalizedMedia : NSObject
 
+@property (nonatomic) NSString *avatar;
 @property (nonatomic) NSString *username;
+@property (nonatomic) NSString *picture;
+@property (nonatomic) NSString *createdTime;
+@property (nonatomic) NSNumber *likeCount;
 
 @end
