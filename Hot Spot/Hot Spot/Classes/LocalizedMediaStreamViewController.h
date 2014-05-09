@@ -7,6 +7,7 @@
 //
 
 @class LocalizedMedia;
+@class HotSpot;
 
 @protocol LocalizedMediaStreamDelegate <NSObject>
 
@@ -16,8 +17,9 @@
 
 @end
 
-@interface LocalizedMediaStreamViewController : UICollectionViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface LocalizedMediaStreamViewController : UICollectionViewController <UICollectionViewDelegate, UICollectionViewDataSource, LocalizedMediaStreamDelegate>
 
 @property (weak, nonatomic) id<LocalizedMediaStreamDelegate> delegate;
+@property (nonatomic) HotSpot *hotspot;
 
 @end

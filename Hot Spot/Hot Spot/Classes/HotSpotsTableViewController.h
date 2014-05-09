@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Patrick Reynolds. All rights reserved.
 //
 
-#import "LocalizedMediaStreamViewController.h"
-
-@interface HotSpotsTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, LocalizedMediaStreamDelegate>
+@interface HotSpotsTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
