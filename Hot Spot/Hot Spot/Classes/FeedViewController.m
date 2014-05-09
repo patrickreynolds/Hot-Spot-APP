@@ -29,7 +29,7 @@
 #pragma mark - LocalizedMediaStreamDelegate
 
 - (NSInteger)numberOfLocalizedMedia {
-    return 1;
+    return 0;
 }
 
 - (LocalizedMedia *)localizedMediaForRow:(NSInteger)row {
