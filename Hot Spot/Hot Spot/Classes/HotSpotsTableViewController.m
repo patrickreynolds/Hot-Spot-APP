@@ -17,21 +17,22 @@
 
 - (void)refreshHotSpots;
 
-@property (nonatomic) NSMutableArray *hotspots; //Array HotSpot models
-
 @end
 
-@implementation HotSpotsTableViewController
+@implementation HotSpotsTableViewController {
+    NSMutableArray *hotspots; //Array HotSpot models
+}
 
 #pragma mark - Custom methods
 
 - (void)refreshHotSpots {
+    [hotspots removeAllObjects];
     [[User CurrentUser] getHotSpots:^(id responseObject) {
         for (NSDictionary *hotSpot in responseObject[@"hotspots"]) {
             HotSpot *newHotSpot = [HotSpot new];
             newHotSpot.name = hotSpot[@"name"];
             newHotSpot.coordinate = CLLocationCoordinate2DMake([hotSpot[@"lat"] doubleValue], [hotSpot[@"lng"] doubleValue]);
-            [self.hotspots addObject:newHotSpot];
+            [hotspots addObject:newHotSpot];
         }
         [self.refreshControl endRefreshing];
         [self.tableView reloadData];
@@ -52,6 +53,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    hotspots = [NSMutableArray new];
+
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self
                             action:@selector(refreshHotSpots)
@@ -69,7 +72,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         LocalizedMediaStreamViewController *localizedMediaStream = segue.destinationViewController;
         localizedMediaStream.delegate = localizedMediaStream;
-        localizedMediaStream.hotspot = self.hotspots[indexPath.row];
+        localizedMediaStream.hotspot = hotspots[indexPath.row];
     }
 }
 
@@ -100,13 +103,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.hotspots count];
+    return [hotspots count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HotspotCell"
                                                             forIndexPath:indexPath];
-    HotSpot *hotSpot = self.hotspots[indexPath.row];
+    HotSpot *hotSpot = hotspots[indexPath.row];
 
     cell.textLabel.text = hotSpot.name;
     
