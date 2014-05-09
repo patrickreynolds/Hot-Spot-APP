@@ -44,6 +44,22 @@
                              }];
 }
 
+- (void)addHotSpot {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"HotSpot name"
+                                                        message:@"Please enter the name of the new HotSpot"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Ok", nil];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    UITextField *alertTextField = [alertView textFieldAtIndex:0];
+    NSLog(@"alertTextField.text: %@", alertTextField.text);
+}
+
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {

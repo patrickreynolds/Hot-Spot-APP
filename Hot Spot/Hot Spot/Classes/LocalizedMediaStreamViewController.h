@@ -16,7 +16,7 @@
 
 @end
 
-@interface LocalizedMediaStreamViewController : UICollectionViewController <UICollectionViewDelegate, UICollectionViewDataSource, LocalizedMediaStreamDelegate>
+@interface LocalizedMediaStreamViewController : UICollectionViewController <UICollectionViewDelegate, UICollectionViewDataSource, LocalizedMediaStreamDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) id<LocalizedMediaStreamDelegate> delegate;
 @property (nonatomic) HotSpot *hotspot;
