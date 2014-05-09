@@ -120,4 +120,22 @@
           }];
 }
 
+- (void)fetchHotSpot:(NSString *)lat
+                 lng:(NSString *)lng
+             success:(UserSuccessBlock)success
+             failure:(UserFailureBlock)failure {
+    NSString *url = [API fetchHostSpotUrl:lat lng:lng];
+    NSDictionary *parameters = @{@"sessionToken":self.sessionToken};
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:url
+      parameters:parameters
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             success(responseObject);
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             failure(operation.response.statusCode, error, operation.responseObject);
+         }];
+}
+
 @end

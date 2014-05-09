@@ -42,4 +42,12 @@
     return getHotSpotsUrl;
 }
 
++ (NSString *)fetchHostSpotUrl:(NSString *)lat lng:(NSString *)lng {
+    static NSString *fetchHostSpotUrl = nil;
+    if (fetchHostSpotUrl == nil) {
+        fetchHostSpotUrl = [NSString stringWithFormat:@"%@hotspot/%@/%@", API_URL, lat, lng];
+    }
+    return fetchHostSpotUrl;
+}
+
 @end
