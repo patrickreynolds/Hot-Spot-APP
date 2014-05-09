@@ -30,8 +30,7 @@
         for (NSDictionary *hotSpot in responseObject[@"hotspots"]) {
             HotSpot *newHotSpot = [HotSpot new];
             newHotSpot.name = hotSpot[@"name"];
-            newHotSpot.longitude = hotSpot[@"lng"];
-            newHotSpot.latitude = hotSpot[@"lat"];
+            newHotSpot.coordinate = CLLocationCoordinate2DMake([hotSpot[@"lat"] doubleValue], [hotSpot[@"lng"] doubleValue]);
             [self.hotspots addObject:newHotSpot];
         }
         [self.refreshControl endRefreshing];

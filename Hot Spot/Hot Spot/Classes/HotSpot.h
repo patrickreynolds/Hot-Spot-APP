@@ -6,10 +6,11 @@
 //  Copyright (c) 2014 Patrick Reynolds. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
+
 @interface HotSpot : NSObject
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSNumber *longitude;
-@property (strong, nonatomic) NSNumber *latitude;
+@property (nonatomic) NSString *name;
+@property (nonatomic) CLLocationCoordinate2D coordinate;
 
 @end
