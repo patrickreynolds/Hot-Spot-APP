@@ -6,14 +6,12 @@
 //  Copyright (c) 2014 Patrick Reynolds. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface API : NSObject
 
 + (NSString *)signupUrl;
 + (NSString *)loginUrl;
 + (NSString *)associateUrl;
 + (NSString *)getHotSpotsUrl;
-+ (NSString *)fetchHostSpotUrl:(NSString *)lat lng:(NSString *)lng;
++ (NSString *)fetchHotSpotUrl:(NSString *)lat lng:(NSString *)lng;
 
 @end

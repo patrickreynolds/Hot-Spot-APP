@@ -124,7 +124,7 @@
                  lng:(NSString *)lng
              success:(UserSuccessBlock)success
              failure:(UserFailureBlock)failure {
-    NSString *url = [API fetchHostSpotUrl:lat lng:lng];
+    NSString *url = [API fetchHotSpotUrl:lat lng:lng];
     NSDictionary *parameters = @{@"sessionToken":self.sessionToken};
 
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
