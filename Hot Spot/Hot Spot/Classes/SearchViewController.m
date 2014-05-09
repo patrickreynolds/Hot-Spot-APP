@@ -36,6 +36,9 @@
 }
 
 - (void)addPinToMap:(UIGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
+        return;
+    }
     if (self.hotSpotMapAnnotation) {
         [self.mapView removeAnnotation:self.hotSpotMapAnnotation];
     }
