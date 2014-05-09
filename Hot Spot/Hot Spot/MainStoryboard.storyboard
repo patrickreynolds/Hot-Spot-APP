@@ -432,11 +432,11 @@
             </objects>
             <point key="canvasLocation" x="-196" y="-417"/>
         </scene>
-        <!--Navigation Controller - Search-->
+        <!--Navigation Controller - My HotSpots-->
         <scene sceneID="pFj-6v-COu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zWv-dy-wJi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="wII-R5-YnF"/>
+                    <tabBarItem key="tabBarItem" title="My HotSpots" id="wII-R5-YnF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m69-C6-L6a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
