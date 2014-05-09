@@ -50,6 +50,12 @@
     if (self.delegate) {
         if ([self.delegate isKindOfClass:([self class])]) {
             self.title = self.hotspot.name;
+            if ([self.title isEqualToString:@"Preview"]) {
+                UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                                         target:self
+                                                                                         action:@selector(addHotSpot)];
+                self.navigationItem.rightBarButtonItem = addItem;
+            }
         }
     } else {
         [NSException raise:NSInternalInconsistencyException
@@ -79,11 +85,10 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *kCellIdentifier = @"LocalizedMediaStreamCell";
     if (![self.delegate respondsToSelector:@selector(numberOfLocalizedMedia)]) {
         return nil;
     }
-    LocalizedMediaStreamCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier
+    LocalizedMediaStreamCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LocalizedMediaStreamCell"
                                                                                forIndexPath:indexPath];
     LocalizedMedia *localizedMedia = [self.delegate localizedMediaForRow:indexPath.row];
 
