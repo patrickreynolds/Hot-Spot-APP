@@ -53,12 +53,15 @@
 - (void)viewDidLoad {
     if (self.delegate) {
         if ([self.delegate isKindOfClass:([self class])]) {
-            self.title = self.hotspot.name;
-            if ([self.title isEqualToString:@"Preview"]) {
+
+            if ([self.hotspot isPreview]) {
+                self.title = @"Preview";
                 UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
                                                                                          target:self
                                                                                          action:@selector(addHotSpot)];
                 self.navigationItem.rightBarButtonItem = addItem;
+            } else {
+                self.title = self.hotspot.name;
             }
         }
     } else {

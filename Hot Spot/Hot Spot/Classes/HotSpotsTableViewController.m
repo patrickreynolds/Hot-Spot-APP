@@ -33,6 +33,7 @@
             newHotSpot.name = hotSpot[@"name"];
             newHotSpot.description = hotSpot[@"description"];
             newHotSpot.coordinate = CLLocationCoordinate2DMake([hotSpot[@"lat"] doubleValue], [hotSpot[@"lng"] doubleValue]);
+            newHotSpot.preview = NO;
             [hotspots addObject:newHotSpot];
         }
         [self.refreshControl endRefreshing];

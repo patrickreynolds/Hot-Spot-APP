@@ -79,9 +79,10 @@
     HotSpotMapAnnotation *hotSpotAnnotation = view.annotation;
 
     HotSpot *hotSpot = [HotSpot new];
-    hotSpot.name = @"Preview";
+    hotSpot.name = @"";
     hotSpot.description = @"";
     hotSpot.coordinate = hotSpotAnnotation.coordinate;
+    hotSpot.preview = YES;
 
     LocalizedMediaStreamViewController *localizedMediaStreamViewController = [[UIStoryboard mainStoryboard] instantiateViewControllerWithIdentifier:@"LocalizedMediaStream"];
     localizedMediaStreamViewController.delegate = localizedMediaStreamViewController;

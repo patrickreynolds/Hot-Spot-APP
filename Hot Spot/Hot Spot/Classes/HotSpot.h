@@ -13,5 +13,6 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *description;
 @property (nonatomic) CLLocationCoordinate2D coordinate;
+@property (getter=isPreview) BOOL preview;
 
 @end
