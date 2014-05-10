@@ -9,10 +9,12 @@
 #import "LocalizedMediaStreamViewController.h"
 
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import <UIStoryboard+MainStoryboard.h>
 #import "User.h"
 #import "HotSpot.h"
 #import "LocalizedMediaStreamCell.h"
 #import "LocalizedMedia.h"
+#import "CreateHotSpotViewController.h"
 
 @interface LocalizedMediaStreamViewController ()
 
@@ -45,7 +47,11 @@
 }
 
 - (void)addHotSpot {
-    //TODO: Implement addHotSpot
+    CreateHotSpotViewController *createHotSpotViewController = [[UIStoryboard mainStoryboard] instantiateViewControllerWithIdentifier:@"CreateHotSpot"];
+    createHotSpotViewController.coordinate = self.hotspot.coordinate;
+    [self presentViewController:createHotSpotViewController
+                       animated:YES
+                     completion:nil];
 }
 
 #pragma mark - UIViewController

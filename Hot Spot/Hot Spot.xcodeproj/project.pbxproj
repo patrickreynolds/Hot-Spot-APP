@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E0248BC191B4D12001465AC /* HotSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0248BB191B4D12001465AC /* HotSpot.m */; };
+		7E0BAB28191EC24300FA0D13 /* CreateHotSpotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0BAB27191EC24300FA0D13 /* CreateHotSpotViewController.m */; };
 		7E1E2C31191B915500764506 /* HotSpotMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1E2C30191B915500764506 /* HotSpotMapAnnotation.m */; };
 		7E32EB3719196973002365FE /* LocalizedMediaStreamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E32EB3619196973002365FE /* LocalizedMediaStreamCell.m */; };
 		7E61ED6C19107DE800046C31 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E61ED6B19107DE800046C31 /* MainStoryboard.storyboard */; };
@@ -57,6 +58,8 @@
 		51CA4C3A3CA14771B48A67FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E0248BA191B4D12001465AC /* HotSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotSpot.h; sourceTree = "<group>"; };
 		7E0248BB191B4D12001465AC /* HotSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotSpot.m; sourceTree = "<group>"; };
+		7E0BAB26191EC24300FA0D13 /* CreateHotSpotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateHotSpotViewController.h; sourceTree = "<group>"; };
+		7E0BAB27191EC24300FA0D13 /* CreateHotSpotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateHotSpotViewController.m; sourceTree = "<group>"; };
 		7E1E2C2F191B915500764506 /* HotSpotMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotSpotMapAnnotation.h; sourceTree = "<group>"; };
 		7E1E2C30191B915500764506 /* HotSpotMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotSpotMapAnnotation.m; sourceTree = "<group>"; };
 		7E32EB3519196973002365FE /* LocalizedMediaStreamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedMediaStreamCell.h; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				7E78982819199B0E004E1333 /* HotSpotsTableViewController.h */,
 				7E78982919199B0E004E1333 /* HotSpotsTableViewController.m */,
 				7E7898311919A75C004E1333 /* LocalizedMediaStream */,
+				7E0BAB26191EC24300FA0D13 /* CreateHotSpotViewController.h */,
+				7E0BAB27191EC24300FA0D13 /* CreateHotSpotViewController.m */,
 			);
 			name = Logged;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 			files = (
 				7E61ED86191086E000046C31 /* LoggedViewController.m in Sources */,
 				7E61ED801910860B00046C31 /* LoginViewController.m in Sources */,
+				7E0BAB28191EC24300FA0D13 /* CreateHotSpotViewController.m in Sources */,
 				7E61ED771910839200046C31 /* User.m in Sources */,
 				7E78982A19199B0E004E1333 /* HotSpotsTableViewController.m in Sources */,
 				7E61ED7D191084BC00046C31 /* SplashViewController.m in Sources */,
