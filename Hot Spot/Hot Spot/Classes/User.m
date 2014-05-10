@@ -121,11 +121,12 @@
 }
 
 - (void)createHotSpot:(NSString *)name
+          description:(NSString *)description
                   lat:(NSString *)lat
                   lng:(NSString *)lng
               success:(UserSuccessBlock)success
               failure:(UserFailureBlock)failure {
-    NSDictionary *parameters = @{@"sessionToken":self.sessionToken, @"name":name, @"lat":lat, @"lng":lng};
+    NSDictionary *parameters = @{@"sessionToken":self.sessionToken, @"name":name, @"description":description, @"lat":lat, @"lng":lng};
 
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:[API createHotSpotUrl]

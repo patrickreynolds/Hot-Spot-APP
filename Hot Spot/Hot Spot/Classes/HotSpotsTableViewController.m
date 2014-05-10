@@ -31,6 +31,7 @@
         for (NSDictionary *hotSpot in responseObject[@"hotspots"]) {
             HotSpot *newHotSpot = [HotSpot new];
             newHotSpot.name = hotSpot[@"name"];
+            newHotSpot.description = hotSpot[@"description"];
             newHotSpot.coordinate = CLLocationCoordinate2DMake([hotSpot[@"lat"] doubleValue], [hotSpot[@"lng"] doubleValue]);
             [hotspots addObject:newHotSpot];
         }
@@ -112,6 +113,7 @@
     HotSpot *hotSpot = hotspots[indexPath.row];
 
     cell.textLabel.text = hotSpot.name;
+    cell.detailTextLabel.text = hotSpot.description;
     
     return cell;
 }

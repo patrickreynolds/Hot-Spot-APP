@@ -33,6 +33,7 @@ typedef void (^UserFailureBlock)(NSInteger statusCode, NSError *error, id respon
 - (void)getHotSpots:(UserSuccessBlock)success
             failure:(UserFailureBlock)failure;
 - (void)createHotSpot:(NSString *)name
+          description:(NSString *)description
                   lat:(NSString *)lat
                   lng:(NSString *)lng
               success:(UserSuccessBlock)success
