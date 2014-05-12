@@ -42,6 +42,9 @@ typedef void (^UserFailureBlock)(NSInteger statusCode, NSError *error, id respon
                  lng:(NSString *)lng
              success:(UserSuccessBlock)success
              failure:(UserFailureBlock)failure;
+- (void)deleteHotSpot:(NSString *)hotSpotId
+              success:(UserSuccessBlock)success
+              failure:(UserFailureBlock)failure;
 - (void)getFeed:(UserSuccessBlock)success
         failure:(UserFailureBlock)failure;
 

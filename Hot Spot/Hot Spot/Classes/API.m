@@ -58,6 +58,14 @@
     return [NSString stringWithFormat:@"%@/%@/%@", fetchHotSpotUrl, lat, lng];
 }
 
++ (NSString *)deleteHotSpotUrl:(NSString *)hotSpotId {
+    static NSString *deleteHotSpotUrl = nil;
+    if (deleteHotSpotUrl == nil) {
+        deleteHotSpotUrl = [NSString stringWithFormat:@"%@hotspot", API_URL];
+    }
+    return [NSString stringWithFormat:@"%@/%@/delete", deleteHotSpotUrl, hotSpotId];
+}
+
 + (NSString *)getFeedUrl {
     static NSString *getFeedUrl = nil;
     if (getFeedUrl == nil) {
