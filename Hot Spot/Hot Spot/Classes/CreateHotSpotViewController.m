@@ -23,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.nameTextField.delegate = self;
+    self.descriptionTextField.delegate = self;
 }
 
 - (IBAction)didTapSave:(UIButton *)sender {
@@ -64,6 +67,26 @@
     self.saveButton.enabled = NO;
 
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.nameTextField) {
+        [textField resignFirstResponder];
+        [self.descriptionTextField becomeFirstResponder];
+    } else if (textField == self.descriptionTextField) {
+        [textField resignFirstResponder];
+        [self didTapSave:self.saveButton];
+    }
+    return YES;
+}
+
+#pragma mark - UIResponder
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
 }
 
 @end

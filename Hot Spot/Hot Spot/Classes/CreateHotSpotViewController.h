@@ -8,7 +8,7 @@
 
 #import <MapKit/MapKit.h>
 
-@interface CreateHotSpotViewController : UIViewController
+@interface CreateHotSpotViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 
