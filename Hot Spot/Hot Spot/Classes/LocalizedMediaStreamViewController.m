@@ -57,6 +57,8 @@
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
+
     if (self.delegate) {
         if ([self.delegate isKindOfClass:([self class])]) {
 
@@ -121,7 +123,6 @@
 - (LocalizedMedia *)localizedMediaForRow:(NSInteger)row {
     NSDictionary *media = self.mediaList[row];
     LocalizedMedia *localizedMedia = [LocalizedMedia new];
-
 
     localizedMedia.avatar = media[@"user"][@"profile_picture"];
     localizedMedia.username = media[@"user"][@"username"];

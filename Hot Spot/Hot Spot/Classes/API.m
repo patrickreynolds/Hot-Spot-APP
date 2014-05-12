@@ -55,7 +55,15 @@
     if (fetchHotSpotUrl == nil) {
         fetchHotSpotUrl = [NSString stringWithFormat:@"%@hotspot", API_URL];
     }
-    return [NSString stringWithFormat:@"%@/%@/%@", fetchHotSpotUrl, lat, lng];;
+    return [NSString stringWithFormat:@"%@/%@/%@", fetchHotSpotUrl, lat, lng];
+}
+
++ (NSString *)getFeedUrl {
+    static NSString *getFeedUrl = nil;
+    if (getFeedUrl == nil) {
+        getFeedUrl = [NSString stringWithFormat:@"%@%@", API_URL, @"hotspots/feed"];
+    }
+    return getFeedUrl;
 }
 
 @end

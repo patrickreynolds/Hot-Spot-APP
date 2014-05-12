@@ -157,4 +157,19 @@
          }];
 }
 
+- (void)getFeed:(UserSuccessBlock)success
+        failure:(UserFailureBlock)failure {
+    NSDictionary *parameters = @{@"sessionToken":self.sessionToken};
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:[API getFeedUrl]
+      parameters:parameters
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             success(responseObject);
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             failure(operation.response.statusCode, error, operation.responseObject);
+         }];
+}
+
 @end

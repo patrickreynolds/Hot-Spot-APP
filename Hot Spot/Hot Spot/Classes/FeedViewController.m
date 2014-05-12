@@ -8,34 +8,70 @@
 
 #import "FeedViewController.h"
 
+#import <UIStoryboard+MainStoryboard.h>
 #import "LocalizedMediaStreamViewController.h"
 #import "LocalizedMedia.h"
+#import "User.h"
 
 @interface FeedViewController ()
+
+- (void)getFeed;
+
+@property (weak, nonatomic) LocalizedMediaStreamViewController *embedLocalizedMediaStreamViewController;
+@property (nonatomic) NSArray *mediaList;
 
 @end
 
 @implementation FeedViewController
 
+#pragma mark - Custom methods
+
+- (void)getFeed {
+    [[User CurrentUser] getFeed:^(id responseObject) {
+        self.mediaList = responseObject[@"mediaList"];
+        [self.embedLocalizedMediaStreamViewController.collectionView reloadData];
+    }
+                        failure:^(NSInteger statusCode, NSError *error, id responseObject) {
+                            //TODO: statusCode
+                            [[[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:error.localizedDescription
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil] show];
+
+                        }];
+}
+
 #pragma mark - UIViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self getFeed];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"embedLocalizedMediaStream"]) {
-        LocalizedMediaStreamViewController *localizedMediaStream = segue.destinationViewController;
-        localizedMediaStream.delegate = self;
+        self.embedLocalizedMediaStreamViewController = segue.destinationViewController;
+        self.embedLocalizedMediaStreamViewController.delegate = self;
     }
 }
 
 #pragma mark - LocalizedMediaStreamDelegate
 
 - (NSInteger)numberOfLocalizedMedia {
-    return 0;
+    return [self.mediaList count];
 }
 
 - (LocalizedMedia *)localizedMediaForRow:(NSInteger)row {
+    NSDictionary *media = self.mediaList[row];
     LocalizedMedia *localizedMedia = [LocalizedMedia new];
 
-    localizedMedia.username = [NSString stringWithFormat:@"Username %d", row];
+    localizedMedia.avatar = media[@"user"][@"profile_picture"];
+    localizedMedia.username = media[@"user"][@"username"];
+    localizedMedia.picture = media[@"images"][@"standard_resolution"][@"url"];
+    localizedMedia.createdTime = media[@"created_time"];
+    localizedMedia.likeCount = media[@"likes"][@"count"];
 
     return localizedMedia;
 }

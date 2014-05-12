@@ -14,5 +14,6 @@
 + (NSString *)getHotSpotsUrl;
 + (NSString *)createHotSpotUrl;
 + (NSString *)fetchHotSpotUrl:(NSString *)lat lng:(NSString *)lng;
++ (NSString *)getFeedUrl;
 
 @end
