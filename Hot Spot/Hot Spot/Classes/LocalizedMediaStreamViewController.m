@@ -127,9 +127,14 @@
     localizedMedia.avatar = media[@"user"][@"profile_picture"];
     localizedMedia.username = media[@"user"][@"username"];
     localizedMedia.picture = media[@"images"][@"standard_resolution"][@"url"];
-    localizedMedia.createdTime = media[@"created_time"];
-    localizedMedia.likeCount = media[@"likes"][@"count"];
 
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[(NSNumber *)media[@"created_time"] doubleValue]];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setLocale:[NSLocale currentLocale]];
+    [formatter setDateFormat:@"dd.MM.yyyy 'at' hh.mm a"];
+    localizedMedia.createdTime = [formatter stringFromDate:date];
+
+    localizedMedia.likeCount = media[@"likes"][@"count"];
 
     return localizedMedia;
 }
