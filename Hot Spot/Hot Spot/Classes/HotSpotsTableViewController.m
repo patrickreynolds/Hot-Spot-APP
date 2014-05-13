@@ -129,17 +129,27 @@
 }
 */
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    HotSpot *hotSpot = hotspots[indexPath.row];
+
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        NSString *hotSpotId = hotSpot._id;
+        [hotspots removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        [[User CurrentUser] deleteHotSpot:hotSpotId
+                                  success:^(id responseObject) {}
+                                  failure:^(NSInteger statusCode, NSError *error, id responseObject) {
+                                      //TODO: statusCode
+                                      [[[UIAlertView alloc] initWithTitle:@"Error"
+                                                                  message:error.localizedDescription
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles:nil] show];
+                                  }];
+    }
+//    if (editingStyle == UITableViewCellEditingStyleInsert) {
+//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//    }
 }
-*/
 
 @end
