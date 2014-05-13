@@ -25,15 +25,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.hotSpotMapAnnotation = [[HotSpotMapAnnotation alloc] initWithTitle:@"Preview"
+                                                                andLocation:CLLocationCoordinate2DMake(32.851402, -117.273812)];
+
     [self addGestureRecogniserToMapView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    self.hotSpotMapAnnotation = [[HotSpotMapAnnotation alloc] initWithTitle:@"Preview"
-                                                                andLocation:CLLocationCoordinate2DMake(32.851402, -117.273812)];
-    [self.mapView addAnnotation:self.hotSpotMapAnnotation];
+    if (self.hotSpotMapAnnotation) {
+        [self.mapView addAnnotation:self.hotSpotMapAnnotation];
+    }
 }
 
 - (void)addGestureRecogniserToMapView {
@@ -54,7 +57,7 @@
     CLLocationCoordinate2D touchMapCoordinate = [self.mapView convertPoint:touchPoint
                                                       toCoordinateFromView:self.mapView];
 
-    self.hotSpotMapAnnotation = [[HotSpotMapAnnotation alloc] initWithTitle:@"Annotation"
+    self.hotSpotMapAnnotation = [[HotSpotMapAnnotation alloc] initWithTitle:@"Preview"
                                                                 andLocation:touchMapCoordinate];
     [self.mapView addAnnotation:self.hotSpotMapAnnotation];
 }
