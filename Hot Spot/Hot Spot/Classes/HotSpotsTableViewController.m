@@ -30,6 +30,7 @@
     [[User CurrentUser] getHotSpots:^(id responseObject) {
         for (NSDictionary *hotSpot in responseObject[@"hotspots"]) {
             HotSpot *newHotSpot = [HotSpot new];
+            newHotSpot._id = hotSpot[@"_id"];
             newHotSpot.name = hotSpot[@"name"];
             newHotSpot.description = hotSpot[@"description"];
             newHotSpot.coordinate = CLLocationCoordinate2DMake([hotSpot[@"lat"] doubleValue], [hotSpot[@"lng"] doubleValue]);

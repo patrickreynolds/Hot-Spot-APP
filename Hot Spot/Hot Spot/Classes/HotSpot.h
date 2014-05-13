@@ -10,6 +10,7 @@
 
 @interface HotSpot : NSObject
 
+@property (nonatomic) NSString *_id;
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *description;
 @property (nonatomic) CLLocationCoordinate2D coordinate;
